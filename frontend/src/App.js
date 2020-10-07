@@ -10,7 +10,7 @@ function App() {
         <header className="row">
             <div>
                 <a className="brand" href="/">
-                  TianCat
+                  Webstore for Legends
                 </a>
             </div>
             <div>
@@ -23,7 +23,7 @@ function App() {
           <Route path="/" component={HomePage} exact></Route>
         </main>
         <footer className="row center">
-            Project Shopping Websit Programming 2020. Kailun Yang <br/>
+            Project Shopping Websit Programming 2020. Legends <br/>
             Disclaimer: All of this information is ficticious <br/>
             All right reserved <br/>
         </footer>
