@@ -10,7 +10,7 @@ function App() {
         <header className="row">
             <div>
                 <a className="brand" href="/">
-                  Webstore for Legends
+                  Big noodles
                 </a>
             </div>
             <div>
