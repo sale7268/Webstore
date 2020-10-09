@@ -25,5 +25,8 @@
   "bugs": {
     "url": "https://github.com/kyyyyy288/tianmao-app/issues"
   },
-  "homepage": "https://github.com/kyyyyy288/tianmao-app#readme"
+  "homepage": "https://github.com/kyyyyy288/tianmao-app#readme",
+  "bundleDependencies": [
+    "eslint"
+  ]
 }
