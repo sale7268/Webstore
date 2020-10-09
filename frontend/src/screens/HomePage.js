@@ -23,12 +23,7 @@ export default function HomePage() {
         fecthData();
       }, []);
     return (
-        <div>
-            <div className="row center">
-         {products.map((product) => (
-           <Product key={product._id} product={product}></Product>
-         ))}
-       </div>
+      <div>
        {loading ? (
          <LoadingBox></LoadingBox>
        ) : error ? (
@@ -40,6 +35,6 @@ export default function HomePage() {
            ))}
          </div>
        )}
-        </div>
+      </div>
     );
 }
