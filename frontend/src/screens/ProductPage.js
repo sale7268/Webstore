@@ -4,6 +4,7 @@ import Rating from '../components/Rating';
 import data from '../data';
 import { Link } from 'react-router-dom';
 
+
 export default function ProductPage(props) {
     const product = data.products.find((x) => x._id === props.match.params.id);
     if(!product){
