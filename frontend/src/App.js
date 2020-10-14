@@ -4,6 +4,7 @@ import CartPage from './screens/CartPage';
 import HomePage from './screens/HomePage';
 import ProductPage from './screens/ProductPage';
 import {useSelector} from 'react-redux';
+import SigninPage from './screens/SigninPage';
 
 function App() {
   const cart = useSelector((state) => state.cart);
@@ -30,6 +31,7 @@ function App() {
         <main>
           <Route path="/cart/:id?" component={CartPage}></Route>
           <Route path="/product/:id" component={ProductPage}></Route>
+          <Route path="/signin" component={SigninPage}></Route>
           <Route path="/" component={HomePage} exact></Route>
         </main>
         <footer className="row center">
