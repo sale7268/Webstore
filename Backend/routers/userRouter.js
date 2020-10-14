@@ -1,18 +1,40 @@
 import express from 'express';
 import expressAsyncHandler from 'express-async-handler';
+import bcrypt from 'bcryptjs';
 import data from '../data.js';
 import User from '../models/userModel.js';
+import { generateToken } from '../utils.js';
 
 const userRouter = express.Router();
 
-//instead of having all routes in server js we can define more to make it more easy
 userRouter.get(
   '/seed',
   expressAsyncHandler(async (req, res) => {
-    await User.remove({});
-    //Adding user to user array
+    // await User.remove({});     // To remove all users
     const createdUsers = await User.insertMany(data.users);
     res.send({ createdUsers });
+  })
+);
+
+//Getting user email and data from DB
+userRouter.post(
+  '/signin',
+  expressAsyncHandler(async (req, res) => {
+    const user = await User.findOne({ email: req.body.email });
+    if (user) {
+      if (bcrypt.compareSync(req.body.password, user.password)) {
+        res.send({
+          _id: user._id,
+          name: user.name,
+          email: user.email,
+          isAdmin: user.isAdmin,
+          token: generateToken(user),
+        });
+        return;
+      }
+    }
+    //else
+    res.status(401).send({ message: 'Invalid email or password' });
   })
 );
 
