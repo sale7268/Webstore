@@ -17,7 +17,6 @@ const data = {
     ],
     products:[
         {
-            _id:'1',
             name:'Ferrari 488 Pista',
             category:'SportsCar',
             image:'/images/p1.png',
@@ -29,7 +28,6 @@ const data = {
             description:'3.9-liter Twin-Turbo V8 Gas'
         },
         {
-            _id:'2',
             name:'Lamborghini Aventador SV',
             category:'SportsCar',
             image:'/images/p2.png',
@@ -41,7 +39,6 @@ const data = {
             description:'6.5-liter V12 Gas'
         },
         {
-            _id:'3',
             name:'Porsche GT3 RS',
             category:'SportsCar',
             image:'/images/p3.png',
@@ -53,7 +50,6 @@ const data = {
             description:'4.0-liter Flat 6 Gas'
         },
         {
-            _id:'4',
             name:'Mercedes-AMG G63',
             category:'Off-Road',
             image:'/images/p4.png',
@@ -65,7 +61,6 @@ const data = {
             description:'4.0-liter Twin-Turbo V8 Gas'
         },
         {
-            _id:'5',
             name:'Jeep Wrangler',
             category:'Off-Road',
             image:'/images/p5.png',
@@ -77,7 +72,6 @@ const data = {
             description:'3.6-liter V6 Gas'
         },
         {
-            _id:'6',
             name:'Land Rover Defender',
             category:'Off-Road',
             image:'/images/p6.png',
