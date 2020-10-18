@@ -22,4 +22,10 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 .env
+<<<<<<< HEAD
 package-lock.json
+=======
+frontend/package-lock.json
+package-lock.json
+frontend/package-lock.json
+>>>>>>> 03887e400b2df002531fda0cff75cc683255f7d3
