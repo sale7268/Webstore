@@ -6,12 +6,14 @@ import ProductPage from './screens/ProductPage';
 import {useDispatch, useSelector} from 'react-redux';
 import SigninPage from './screens/SigninPage';
 import { signout } from './actions/userActions';
+import PrivateRoute from './components/PrivateRoute';
 import RegisterPage from './screens/RegisterPage';
 import ShippingAddressPage from './screens/ShippingAddressPage';
 import PaymentMethodPage from './screens/PaymentMethodPage';
 import PlaceOrderPage from './screens/PlaceOrderPage';
 import OrderPage from './screens/OrderPage';
 import OrderHistoryPage from './screens/OrderHistoryPage';
+import ProfilePage from './screens/ProfilePage';
 
 function App() {
   const cart = useSelector((state) => state.cart);
@@ -46,6 +48,9 @@ function App() {
                   </Link>
                   <ul className="dropdown-content">
                   <li>
+                    <Link to="/profile">User Profile</Link>
+                  </li>
+                  <li>
                     <Link to="/orderhistory">Order History</Link>
                   </li>
                     <Link to="#signout" onClick={signoutHandler}>
@@ -69,6 +74,10 @@ function App() {
           <Route path="/placeorder" component={PlaceOrderPage}></Route>
           <Route path="/order/:id" component={OrderPage}></Route>
           <Route path="/orderhistory" component={OrderHistoryPage}></Route>
+          <PrivateRoute
+            path="/profile"
+            component={ProfilePage}
+          ></PrivateRoute>
           <Route path="/" component={HomePage} exact></Route>
         </main>
         <footer className="row center">
