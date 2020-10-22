@@ -8,7 +8,7 @@ import SigninPage from './screens/SigninPage';
 import { signout } from './actions/userActions';
 import RegisterPage from './screens/RegisterPage';
 import ShippingAddressPage from './screens/ShippingAddressPage';
-import PaymentMethodScreen from './screens/PaymentMethodPage';
+import PaymentMethodPage from './screens/PaymentMethodPage';
 import PlaceOrderPage from './screens/PlaceOrderPage';
 import OrderPage from './screens/OrderPage';
 
@@ -61,7 +61,7 @@ function App() {
           <Route path="/signin" component={SigninPage}></Route>
           <Route path="/register" component={RegisterPage}></Route>
           <Route path="/shipping" component={ShippingAddressPage}></Route>
-          <Route path="/payment" component={PaymentMethodScreen}></Route>
+          <Route path="/payment" component={PaymentMethodPage}></Route>
           <Route path="/placeorder" component={PlaceOrderPage}></Route>
           <Route path="/order/:id" component={OrderPage}></Route>
           <Route path="/" component={HomePage} exact></Route>
