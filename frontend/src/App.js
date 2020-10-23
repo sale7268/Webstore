@@ -14,6 +14,10 @@ import PlaceOrderPage from './screens/PlaceOrderPage';
 import OrderPage from './screens/OrderPage';
 import OrderHistoryPage from './screens/OrderHistoryPage';
 import ProfilePage from './screens/ProfilePage';
+import AdminRoute from './components/AdminRoute';
+//import Product from './components/Product';
+import ProductListScreen from './screens/ProductListScreen';
+import ProductEditScreen from './screens/ProductEditScreen';
 
 function App() {
   const cart = useSelector((state) => state.cart);
@@ -40,8 +44,7 @@ function App() {
                 <span className="badge">{cartItems.length}</span>
               )}
             </Link>
-            {
-              userInfo ? (
+            {userInfo ? (
                 <div className="dropdown">
                   <Link to="#">
                     {userInfo.name} <i className="fa fa-caret-down"></i>{' '}
@@ -62,11 +65,33 @@ function App() {
                 <Link to="/signin">Sign In</Link>
               )
             }
+            {userInfo && userInfo.isAdmin && (
+              <div className="dropdown">
+                <Link to="#admin">
+                  Admin<i className="fa fa-caret-down"></i>
+                </Link>
+                <ul className="dropdown-content">
+                  <li>
+                    <Link to="/dashboard">Dashboard</Link>
+                  </li>
+                  <li>
+                    <Link to="/productlist">Products</Link>
+                  </li>
+                  <li>
+                    <Link to="/orderlist">Orders</Link>
+                  </li>
+                  <li>
+                    <Link to="/userlist">Users</Link>
+                  </li>
+                </ul>
+              </div>
+            )}
             </div>
         </header>
         <main>
           <Route path="/cart/:id?" component={CartPage}></Route>
-          <Route path="/product/:id" component={ProductPage}></Route>
+          <Route path="/product/:id" component={ProductPage} exact></Route>
+          <Route path="/product/:id/edit" component={ProductEditScreen} exact></Route>
           <Route path="/signin" component={SigninPage}></Route>
           <Route path="/register" component={RegisterPage}></Route>
           <Route path="/shipping" component={ShippingAddressPage}></Route>
@@ -78,6 +103,10 @@ function App() {
             path="/profile"
             component={ProfilePage}
           ></PrivateRoute>
+          <AdminRoute 
+            path="/productlist" 
+            component={ProductListScreen}
+          ></AdminRoute>
           <Route path="/" component={HomePage} exact></Route>
         </main>
         <footer className="row center">
