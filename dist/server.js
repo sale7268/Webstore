@@ -7,8 +7,7 @@ import orderRouter from './routers/orderRouter.js';
 import uploadRouter from './routers/uploadRouter.js';
 import path from 'path';
 
-//dotenv.config();
-
+dotenv.config();
 //Use/Test with postman
 const app = express();
 app.use(express.json());
@@ -17,7 +16,7 @@ app.use(express.urlencoded({ extended: true }));
 mongoose.connect(process.env.MONGODB_URL || 'mongodb://localhost/webstore', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
-  useCreateIndex: true,
+  useCreateIndex: true
 });
 app.use('/api/uploads', uploadRouter);
 app.use('/api/users', userRouter);
