@@ -2,7 +2,7 @@
   "name": "amazonf",
   "type": "module",
   "version": "1.0.0",
-  "description": "",
+  "description": "node api hosted on heroku",
   "main": "index.js",
   "dependencies": {
     "babel-cli": "^6.26.0",
