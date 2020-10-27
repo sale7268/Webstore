@@ -22,6 +22,10 @@
     "nodemon": "^2.0.4",
     "babel-cli": "^6.14.0"
   },
+  "engines": {
+    "node": "12.4.0",
+    "npm": "6.9.0"
+  },
   "scripts": {
     "build": "cd frontend && npm install && npm run build",
     "start": "nodemon --watch backend --exec node --experimental-modules backend/server.js"
@@ -36,10 +40,6 @@
     "url": "https://github.com/kyyyyy288/tianmao-app/issues"
   },
   "homepage": "https://github.com/kyyyyy288/tianmao-app#readme",
-  "engines": {
-    "node": "12.4.0",
-    "npm": "6.9.0"
-  },
   "bundleDependencies": [
     "eslint"
   ]
