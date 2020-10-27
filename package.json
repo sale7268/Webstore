@@ -26,14 +26,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kyyyyy288/tianmao-app.git"
+    "url": "git+https://github.com/sale7268/Webstore.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/kyyyyy288/tianmao-app/issues"
+    "url": "https://github.com/sale7268/Webstore/issues"
   },
-  "homepage": "https://github.com/kyyyyy288/tianmao-app#readme",
+  "homepage": "https://github.com/sale7268/Webstore#readme",
   "bundleDependencies": [
     "eslint"
   ]
