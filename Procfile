@@ -1,1 +1,1 @@
-web: node src/big-noodles.js
+web: node src/app.js
